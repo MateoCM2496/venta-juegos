@@ -18,9 +18,9 @@ Route::get('/', function () {
     return view('inicio');
 });
 
-Route::get('/dashboard', function () {
+Route::get('/inicio', function () {
     return view('inicio');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified'])->name('inicio');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

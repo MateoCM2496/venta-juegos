@@ -14,7 +14,7 @@
 
     <nav class="bg-blue-500 border-gray-200 dark:bg-gray-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="{{ route('dashboard') }}" class="flex items-center">
+            <a href="{{ route('inicio') }}" class="flex items-center">
                 <img src="/images/xpn.jpg" class="h-8 mr-3" alt="Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">JuegosCol</span>
             </a>
@@ -99,12 +99,13 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf <!-- Agrega el token CSRF -->
                     </form>
+                    
                 @else
                     <div>
                         <a href="{{ route('login') }}"
                             class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                            Iniciar Sesion 
-                          </a>
+                            Iniciar Sesion
+                        </a>
                         <a href="{{ route('register') }}"
                             class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                             Registrarse
@@ -133,7 +134,7 @@
     <main class="py-12">
         <h1 class="text-center text-3xl font-bold">Este es el contenido de la página</h1>
     </main>
-
+    <x-footer />
 </body>
 
 </html>
