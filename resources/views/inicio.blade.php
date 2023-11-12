@@ -8,6 +8,7 @@
     </title>
 
     <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+ 
 </head>
 
 <body class="bg-blue-600">
@@ -86,22 +87,17 @@
                 @if (Auth::check())
                     <div
                         class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                        <a href="">
-                            <x-icons.user class="w-10 h-10 text-white" />
-                            {{ Auth::user()->name }},
+                        <a>                        
+                            <button onclick="Livewire.dispatch('openModal', { component: 'edit-user' })">
+                                <x-icons.user class="w-10 h-10 text-white" />
+                                {{ Auth::user()->name }}
+                            </button>
                         </a>
-
                     </div>
-                    <a href="{{ route('logout') }}"
-                        class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar Sesion
-                    </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf <!-- Agrega el token CSRF -->
-                    </form>
                     
                 @else
                     <div>
+                        
                         <a href="{{ route('login') }}"
                             class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                             Iniciar Sesion
@@ -135,6 +131,8 @@
         <h1 class="text-center text-3xl font-bold">Este es el contenido de la página</h1>
     </main>
     <x-footer />
+}
+    @livewire('wire-elements-modal')
 </body>
 
 </html>
