@@ -5763,16 +5763,16 @@
         },
         {
             "name": "wire-elements/modal",
-            "version": "2.0.7",
+            "version": "2.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wire-elements/modal.git",
-                "reference": "0f64fc4c4be49a343a6e025d81629113d5ccdc93"
+                "reference": "d6dac3a6ef6527a734504d8a84de49ec0a72282b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wire-elements/modal/zipball/0f64fc4c4be49a343a6e025d81629113d5ccdc93",
-                "reference": "0f64fc4c4be49a343a6e025d81629113d5ccdc93",
+                "url": "https://api.github.com/repos/wire-elements/modal/zipball/d6dac3a6ef6527a734504d8a84de49ec0a72282b",
+                "reference": "d6dac3a6ef6527a734504d8a84de49ec0a72282b",
                 "shasum": ""
             },
             "require": {
@@ -5815,9 +5815,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wire-elements/modal/issues",
-                "source": "https://github.com/wire-elements/modal/tree/2.0.7"
+                "source": "https://github.com/wire-elements/modal/tree/2.0.8"
             },
-            "time": "2023-09-08T20:15:14+00:00"
+            "time": "2023-11-12T14:57:13+00:00"
         }
     ],
     "packages-dev": [
@@ -8331,5 +8331,5 @@
         "php": "^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
