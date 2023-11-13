@@ -1,5 +1,5 @@
 
-<div  class="p-4 sm:p-8 bg-blue-600 dark:bg-gray-800 shadow ">
+<div class="p-2 bg-blue-600 dark:bg-gray-800 shadow mx-auto  ">
     {{-- To attain knowledge, add things every day; To attain wisdom, subtract things every day. --}}
     <header>
         <h2 class="text-2xl font-medium text-white dark:text-gray-100">
@@ -7,11 +7,11 @@
         </h2>
     </header>
     <a href="{{ route('profile.edit') }}"
-        class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+        class="block text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
         Mi Cuenta
     </a>
     <a href="{{ route('logout') }}"
-        class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+        class="block text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar Sesion
     </a>
     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

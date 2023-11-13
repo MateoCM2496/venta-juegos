@@ -16,7 +16,7 @@
     <nav class="bg-blue-500 border-gray-200 dark:bg-gray-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="{{ route('inicio') }}" class="flex items-center">
-                <img src="/images/xpn.jpg" class="h-8 mr-3" alt="Logo" />
+                <img src="/images/xpn.jpg" class="h-16 mr-4" alt="Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">JuegosCol</span>
             </a>
             <div class="flex md:order-2">
