@@ -38,12 +38,12 @@ class DatabaseSeeder extends Seeder
             'name' => 'admin',
             'title' => 'Administrator',
         ]);
-        
+
         $admin_abilities = Bouncer::ability()->firstOrCreate([
             'name' => 'create-games',
             'title' => 'Create new game ',
         ]);
-        
+
         Bouncer::allow($admin)->to($admin_abilities);
 
         $user = User::first();
