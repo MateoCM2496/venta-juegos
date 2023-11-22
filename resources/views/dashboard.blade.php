@@ -1,3 +1,1 @@
-<x-dash>
-
-</x-dash>
+@extends('layouts.admin')

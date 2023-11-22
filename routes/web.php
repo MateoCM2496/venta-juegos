@@ -25,6 +25,7 @@ Route::get('/inicio', function () {
     return view('inicio');
 })->middleware(['auth', 'verified'])->name('inicio');
 
+
 Route::get('/psn', [PsnController::class, 'index'])->name('psn');
 Route::get('/xbox', [XboxController::class, 'index'])->name('xbox');
 Route::get('/nintendo', [NintendoController::class, 'index'])->name('nintendo');
@@ -33,6 +34,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/dashboard', function () { return view('dashboard'); })->name('dashboard');
 });
 
 require __DIR__.'/auth.php';
