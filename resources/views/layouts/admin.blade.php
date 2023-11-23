@@ -16,29 +16,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('css/adminlte.min.css')}}">
 </head>
+
 <body class="hold-transition sidebar-mini">
-<div class="wrapper">
 
-  @include('layouts.partials.header')
+  <div class="wrapper">
 
-  @include('layouts.partials.sidebar')
+    @include('layouts.partials.header')
 
-  <div class="content-wrapper">
+    @include('layouts.partials.sidebar')
+
+    <div class="content-wrapper">
+
+        @yield('content')
+
+    </div>
 
 
-  </div>
+    {{--@include('layouts.partials.footer')--}}
 
+</div>
 
-  @include('layouts.partials.footer')
-<!-- ./wrapper -->
-
-<!-- REQUIRED SCRIPTS -->
-
-<!-- jQuery -->
 <script src="{{ asset('js/plugins/jquery.min.js') }}"></script>
-<!-- Bootstrap 4 -->
-<script src="{{ asset('js/plugins/bootstrap.bundle.min.js')}}"></script>
-<!-- AdminLTE App -->
+<script src="{{ asset('js/plugins/bootstrap.bundle.js')}}"></script>
 <script src="{{ asset('js/adminlte.min.js')}}"></script>
+
 </body>
 </html>

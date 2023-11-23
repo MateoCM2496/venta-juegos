@@ -1,8 +1,8 @@
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <div class="flex justify-start items-center pr-5">
+    <div class="flex justify-start items-center col-sm-6">
         <h1 class="text-2xl font-bold">Panel de Control</h1>
     </div>
-    <div class="flex justify-center items-center pr-5">
+    <div class="flex justify-center items-center col-sm-5">
         <input type="text" id="search-navbar"
             class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Buscar...">

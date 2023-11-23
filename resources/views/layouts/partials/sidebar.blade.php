@@ -20,7 +20,7 @@
           <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.games.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Juegos</p>
                 </a>
@@ -28,7 +28,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('admin.users.index') }}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>Usuarios</p>
             </a>
