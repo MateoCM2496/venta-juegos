@@ -8,23 +8,33 @@
     </div>
 
 
-    <div class="flex flex-wrap gap-4 pl-12">
-        <a href="#"
-            class="block bg-blue-900 p-4 shadow-md w-1/6 m-2 relative overflow-hidden transform transition-transform hover:border-b-2 hover:border-blue-400">
-            <div class="overflow-hidden flex items-center">
-                <img class="w-full h-full object-cover object-center" src="{{ asset('images/Spider-Man.jpg') }}"
-                    alt="prueba">
-            </div>
-            <div class="p-2">
-                <h3 class="text-lg font-semibold text-white my-2">Spider-Man</h3>
-                <p class="text-gray-500 font-bold">Desde</p>
-                <p class="text-white text-2xl font-bold">$99.99</p>
-            </div>
+    {{--<div class="mx-12 mt-8 w-60 h-96 bg-blue-900">
+        <a class="w-60 h-96" href="#">
+            <img class="w-60 h-64" src="{{ asset('images/Spider-Man.jpg') }}" alt="prueba">
+            <p class="text-white pl-6 mb-8">Spider-Man</p>
+            <p class="text-gray-500 font-bold pl-6">Desde</p>
+            <p class="text-white font-bold text-2xl pl-6">$90,00</p>
         </a>
 
-
+    </div>--}}
+    <div class="flex flex-wrap gap-4 pl-12">
+        <div class="w-60 h-96 bg-blue-900">
+            <a class="w-60 h-96" href="#">
+                <img class="w-60 h-64" src="{{ asset('images/Spider-Man.jpg') }}" alt="prueba">
+                <p class="text-white pl-6 mb-8">Spider-Man</p>
+                <p class="text-gray-500 font-bold pl-6">Desde</p>
+                <p class="text-white font-bold text-2xl pl-6">$90,00</p>
+            </a>
+        </div>
+        <div class="w-60 h-96 bg-blue-900">
+            <a class="w-60 h-96" href="#">
+                <img class="w-60 h-64" src="{{ asset('images/cod.jpg') }}" alt="prueba">
+                <p class="text-white pl-6 mb-8">CoD modern warfare</p>
+                <p class="text-gray-500 font-bold pl-6">Desde</p>
+                <p class="text-white font-bold text-2xl pl-6">$80,00</p>
+            </a>
+        </div>
+        
     </div>
-
-
 
 </x-layout>
