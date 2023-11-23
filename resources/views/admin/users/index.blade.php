@@ -16,7 +16,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Listado de usuarios</h5>
+                        <h5 class="card-title py-2">Listado de usuarios</h5>
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
@@ -28,16 +28,18 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($users as $user)
                                 <tr>
-                                    <td>{{ auth()->user()->id }}</td>
-                                    <td>{{ auth()->user()->name}}</td>
-                                    <td>{{ auth()->user()->email }}</td>
-                                    <td>{{ auth()->user()->created_at }}</td>
+                                    <td>{{ $user->id }}</td>
+                                    <td>{{ $user->name }}</td>
+                                    <td>{{ $user->email }}</td>
+                                    <td>{{ $user->created_at }}</td>
                                     <td>
                                         <a class="btn btn-success" href="#">Editar</a>
                                         <a class="btn btn-danger" href="#">Eliminar</a>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
