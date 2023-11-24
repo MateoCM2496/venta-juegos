@@ -1,7 +1,9 @@
 <x-layout>
     @livewire('wire-elements-modal')
 
-
+    <div class="w-full h-60 mb-10 mt-2">
+        <img class="w-full h-60" src="{{ asset('images/imagen.png') }}" alt="imagen">
+    </div>
 
     <div class="my-6">
         <h1 class="text-3xl md:text-3xl lg:text-3xl text-left pl-12 text-white font-bold">Recomendaciones para ti</h1>
