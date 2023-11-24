@@ -30,7 +30,7 @@
                             <div class="form-group">
                                 <div class="mb-4">
                                     <label for="description" class="required block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripcion</label>
-                                    <textarea id="description" rows="6" class="form-control" placeholder="Descripcion del juego...."></textarea>
+                                    <textarea id="description" name="description" rows="6" class="form-control" placeholder="Descripcion del juego...."></textarea>
                                     @if ($errors->has('email'))
                                 <span class="text-danger">
                                     <strong>{{ $errors->first('email') }}</strong>
@@ -65,7 +65,9 @@
                                         <i class="fa fa-fw fa-lg fa-arrow-left"></i>
                                         Regresar
                                     </a>
-                                    <input type="submit" value="Guardar" class="btn btn-primary">
+                                    <button class="btn btn-success" type="submit">
+                                        <i class="fa fa-fw fa-lg fa-check-circle"></i>Guardar
+                                    </button>
                                 </div>
                             </div>
                         </form>

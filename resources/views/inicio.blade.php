@@ -1,7 +1,7 @@
 <x-layout>
     @livewire('wire-elements-modal')
 
-    <div class="w-full h-60 mb-10 mt-2">
+    <div class="w-full h-60 mb-20 mt-2">
         <img class="w-full h-60" src="{{ asset('images/imagen.png') }}" alt="imagen">
     </div>
 

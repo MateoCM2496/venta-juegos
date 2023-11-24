@@ -32,7 +32,7 @@ class GameController extends Controller
     public function store(StoreGameRequest $request)
     {
         //
-        Game::saveOrUpdate($request->all());
+        Game::create($request->validated());
         return redirect()->route('admin.games.index');
     }
 

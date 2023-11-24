@@ -22,12 +22,12 @@ class StoreGameRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|max:40',
-            'description' => 'required|max:600',
-            'image' => 'required',
-            'gender' => 'required',
-            'price' => 'required',
-            'stock' => 'required'
+            'name' => ['required','max:40'],
+            'description' => ['required', 'max:600'],
+            'image' => ['required'],
+            'gender' => ['required'],
+            'price' => ['required'],
+            'stock' => ['required']
         ];
     }
 }
