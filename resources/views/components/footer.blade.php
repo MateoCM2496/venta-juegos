@@ -1,4 +1,4 @@
-<footer class="text-sm text-center sm:p-5 text-black font-bold uppercase">
+<footer class="text-sm text-center sm:p-5 text-black font-bold uppercase mt-8">
     @if (Auth::check())
         <header class="sm:p-5 px-4 border-t bg-white block sm:hidden">
             <div class="sm:container sm:mx-auto mx-0 flex justify-center items-center">

@@ -8,7 +8,7 @@
                 <h1 class="m-0">Juegos</h1>
             </div>
             <div class="flex items-end justify-end">
-                <a>
+                <a href="{{ route('admin.games.create')}}">
                 <button class="btn btn-primary">
                     + Nuevo Producto
                 </button>
@@ -25,6 +25,33 @@
                     <div class="card-body">
                         <h5 class="card-title">Lista de juegos disponibles</h5>
                     </div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Genero</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($games as $game)
+                            <tr>
+                                <td>{{ $game->id }}</td>
+                                <td>{{ $game->name }}</td>
+                                <td>{{ $game->gender }}</td>
+                                <td>{{ $game->price }}</td>
+                                <td>{{ $game->stock }}</td>
+                                <td>
+                                    <a class="btn btn-success" href="#">Editar</a>
+                                    <a class="btn btn-danger" href="#">Eliminar</a>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

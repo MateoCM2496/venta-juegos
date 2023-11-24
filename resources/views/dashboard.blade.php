@@ -19,7 +19,9 @@
                         <h5 class="card-title">Bienvenido</h5>
                     </div>
                 </div>
-            </div>
+             </div>
+        </div>
+    </div>
 </div>
     
 @endsection

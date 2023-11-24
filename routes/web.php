@@ -5,6 +5,7 @@ use App\Http\Controllers\GameController;
 use App\Http\Controllers\PsnController;
 use App\Http\Controllers\XboxController;
 use App\Http\Controllers\NintendoController;
+use App\Http\Controllers\InfoController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +32,7 @@ Route::get('/inicio', function () {
 Route::get('/psn', [PsnController::class, 'index'])->name('psn');
 Route::get('/xbox', [XboxController::class, 'index'])->name('xbox');
 Route::get('/nintendo', [NintendoController::class, 'index'])->name('nintendo');
+Route::get('/info', [InfoController::class, 'index'])->name('informacion');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
