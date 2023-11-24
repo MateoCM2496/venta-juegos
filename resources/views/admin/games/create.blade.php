@@ -40,7 +40,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="image" class="required">Portada </label>
-                                <input id="image" name="image" type="file" class="form-control">
+                                <input id="image" name="image" type="file" class="form-control" accept=".jfif,.pjpeg,.jpeg,.pjp,.jpg,.png,.heic,heif">
                                 @if ($errors->has('password'))
                                 <span class="text-danger">
                                     <strong>{{ $errors->first('password') }}</strong>
