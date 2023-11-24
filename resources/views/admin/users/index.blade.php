@@ -36,6 +36,7 @@
                                     <td>{{ $user->created_at }}</td>
                                     <td>
                                         <a class="btn btn-success" href="#">Editar</a>
+                                        
                                         <a class="btn btn-danger" href="#">Eliminar</a>
                                     </td>
                                 </tr>
