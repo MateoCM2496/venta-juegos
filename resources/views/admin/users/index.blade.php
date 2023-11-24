@@ -17,7 +17,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title py-2">Listado de usuarios</h5>
-                        <table class="table table-bordered">
+                       <table class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th>ID</th>
