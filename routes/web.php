@@ -30,9 +30,7 @@ Route::get('/xbox', [XboxController::class, 'index'])->name('xbox');
 Route::get('/nintendo', [NintendoController::class, 'index'])->name('nintendo');
 Route::get('/info', [InfoController::class, 'index'])->name('informacion');
 
-
 Route::middleware('auth')->group(function () {
-    
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

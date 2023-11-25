@@ -37,7 +37,11 @@
                                     <td>
                                         <a class="btn btn-success" href="#">Editar</a>
                                         
-                                        <a class="btn btn-danger" href="#">Eliminar</a>
+                                        <form action="{{ route('admin.users.destroy', $user->id) }}" id="delete_form" method="POST" onsubmit="return confirm('Esta seguro que desea eliminar el registro?')" style="display: inline-block;">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                            <input type="submit" class="btn btn-danger" value="Eliminar">
+                                        </form>
                                     </td>
                                 </tr>
                                 @endforeach
