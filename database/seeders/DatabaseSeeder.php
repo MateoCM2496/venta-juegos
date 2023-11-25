@@ -5,6 +5,10 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use App\Models\Platform;
+use App\Models\PayMethod;
+use App\Models\StatusSale;
+
 
 use Bouncer;
 
@@ -33,6 +37,35 @@ class DatabaseSeeder extends Seeder
         foreach ($users as $user) {
             User::create($user);
         }
+
+        $platforms = [
+            ['name' => 'XBOX' ],
+            ['name' => 'PSN'],
+            ['name' => 'NINTENDO']
+        ];
+        foreach ($platforms as $platform) {
+            Platform::create($platform);
+        }
+
+         
+        $pay_methods = [
+            ['info_pay_method' => 'Tarjeta Credito' ],
+            ['info_pay_method' => 'Tarjeta Debito' ],
+            ['info_pay_method' => 'Paypal' ],
+        ];
+        foreach ($pay_methods as $pay_method) {
+            PayMethod::create($pay_method);
+        }
+
+        $status_sales = [
+            ['name' => 'Aprovado'],
+            ['name' => 'Desaprovado'],
+            ['name' => 'Pendiente'],
+        ];
+        foreach ($status_sales as $status_sale) {
+            StatusSale::create($status_sale);
+        }
+
 
         $admin = Bouncer::role()->firstOrCreate([
             'name' => 'admin',
