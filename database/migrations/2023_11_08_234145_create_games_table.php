@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('games', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description', 1000);
+            $table->string('description', 5000);
             $table->string('image')->nullable();
             $table->string('gender');
             $table->double('price');
