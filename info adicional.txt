@@ -1,3 +1,16 @@
 Para el modal se utilizo livewire: https://github.com/wire-elements/modal composer require wire-elements/modal
 Roles con boubcer:https://github.com/JosephSilber/bouncer composer require silber/bouncer
  https://flowbite-admin-dashboard.vercel.app/crud/products/
+
+ Para el correcto funcionamiento:
+ install composer
+ install npm
+ composer require wire-elements/modal
+ composer require silber/bouncer
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=dbjuegos
+DB_USERNAME=root
+DB_PASSWORD=
