@@ -68,3 +68,80 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 =======
 # proyecto-final
 >>>>>>> 7118c853c6bbda38a58aac64fef689961ca71761
+
+# Nombre del Proyecto: venta-juegos: JuegosCol
+
+Esta aplicación es una plataforma de venta de videojuegos para Xbox, Nintendo y PSN, tomando inspiración de la página Eneba. 
+
+## Instalación
+
+Sigue estos pasos para instalar y configurar el proyecto localmente:
+1. Clona el repositorio:
+    ```bash
+    git clone https://github.com/MateoCM96/venta-juegos.git, clonar en la carpeta www de wamp64
+    ```
+2. Navega al directorio del proyecto:
+
+    ```bash
+    cd venta-juegos
+    ```
+3. Instala las dependencias de Composer:
+
+    ```bash
+    composer install
+    ```
+
+4. Instala las dependencias de npm:
+
+    ```bash
+    npm install
+    ```
+
+5. Configura el archivo `.env` con la información de tu base de datos y otros detalles específicos:
+
+    ```dotenv
+    APP_URL=http://localhost:8000
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=dbjuegos
+    DB_USERNAME=root
+    DB_PASSWORD=
+    ```
+
+6. Ejecuta las migraciones y los seeders:
+
+    ```bash
+    php artisan migrate:fresh
+
+    ```
+
+7. Instala el paquete Wire Elements Modal:
+
+    ```bash
+    composer require wire-elements/modal
+    ```
+
+8. Instala el paquete Bouncer:
+
+    ```bash
+    composer require silber/bouncer
+    ```
+
+## Características
+
+- Venta de videojuegos para Xbox, Nintendo y PSN.
+- Búsqueda para el juego especifico
+- Carrito de compras y proceso de pago.
+-Panel de control el cual solo el usuario admin tendra acceso: 1. para mostrar la lista de usuarios en la base de datos, 2. para mostrar la lista de juegos creados, se podran agragar nuevos al hacer click en el boton "nuevo producto", boton para modificar un juego en especifico por medio del id o eliminarlo.
+
+## Uso
+
+Describe cómo los usuarios pueden navegar por la plataforma, buscar juegos, agregar al carrito y realizar compras.
+podran editar su nombre y contraseña desde mi cuenta
+Los usuarios podran buscar juegos por medio de plataforma o al dar click en buscar para ingresar el juego especifico
+
+## Licencia
+
+Este proyecto está bajo la Licencia [Nombre de la Licencia]. Consulta el archivo LICENSE para obtener más detalles.
+
