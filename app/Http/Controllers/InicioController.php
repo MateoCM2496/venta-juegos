@@ -10,6 +10,6 @@ class InicioController extends Controller
     public function index()
     {
         $games = Game::all();
-        return view('auth.inicio', compact('games'));
+        return view('inicio', compact('games'));
     }
 }

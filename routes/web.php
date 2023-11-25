@@ -21,12 +21,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('inicio');
-});
 
 
-Route::get('/inicio', [InicioController::class, 'index'])->name('inicio');
+Route::get('/', [InicioController::class, 'index'])->name('inicio');
 Route::get('/psn', [PsnController::class, 'index'])->name('psn');
 Route::get('/xbox', [XboxController::class, 'index'])->name('xbox');
 Route::get('/nintendo', [NintendoController::class, 'index'])->name('nintendo');
