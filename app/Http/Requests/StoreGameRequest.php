@@ -23,7 +23,7 @@ class StoreGameRequest extends FormRequest
     {
         return [
             'name' => ['required', 'max:40'],
-            'description' => ['required', 'max:600'],
+            'description' => ['required', 'max:5000'],
             'image' => ['required'],
             'gender' => ['required'],
             'price' => ['required'],
