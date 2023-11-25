@@ -45,7 +45,7 @@
                                 <td>{{ $game->price }}</td>
                                 <td>{{ $game->stock }}</td>
                                 <td>
-                                    <a class="btn btn-success" href="#">Editar</a>
+                                    <a class="btn btn-success" href="{{route('admin.games.edit', $game->id)}}">Editar</a>
                                     <form action="{{ route('admin.games.destroy', $game->id) }}" id="delete_form" method="POST" onsubmit="return confirm('Esta seguro que desea eliminar el registro?')" style="display: inline-block;">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
