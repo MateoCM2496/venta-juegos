@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Platform;
 use App\Models\Game;
 use App\Http\Requests\StoreGameRequest;
 use App\Http\Requests\UpdateGameRequest;
@@ -22,8 +23,8 @@ class GameController extends Controller
      */
     public function create()
     {
-        //
-        return view('admin.games.create');
+        $platforms = Platform::all();
+        return view('admin.games.create', compact('platforms'));
     }
 
     /**
@@ -49,7 +50,7 @@ class GameController extends Controller
      */
     public function edit(Game $game)
     {
-        //
+        return view('admin.games.edit', compact('game'));
     }
 
     /**
@@ -57,7 +58,8 @@ class GameController extends Controller
      */
     public function update(UpdateGameRequest $request, Game $game)
     {
-        //
+        $game->update($request->validated());
+        return redirect()->route('admin.games.index')->with('success', 'Game updated successfully');
     }
 
     /**

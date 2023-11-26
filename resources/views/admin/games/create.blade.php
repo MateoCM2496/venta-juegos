@@ -39,6 +39,14 @@
                                   </div>
                             </div>
                             <div class="form-group">
+                                <label data-te-select-label-ref>Plataforma</label>
+                                <select data-te-select-init-multiple class="form-control">
+                                    @foreach ($platforms as $platform)
+                                        <option value="{{ $platform->id }}">{{ $platform->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label for="image" class="required">Portada </label>
                                 <input id="image" name="image" type="file" class="form-control" accept=".jfif,.pjpeg,.jpeg,.pjp,.jpg,.png,.heic,heif">
                                 @if ($errors->has('password'))
