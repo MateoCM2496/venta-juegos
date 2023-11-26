@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Platform;
 use App\Models\Game;
 use App\Http\Requests\StoreGameRequest;
 use App\Http\Requests\UpdateGameRequest;
@@ -22,8 +23,8 @@ class GameController extends Controller
      */
     public function create()
     {
-        //
-        return view('admin.games.create');
+        $platforms = Platform::all();
+        return view('admin.games.create', compact('platforms'));
     }
 
     /**

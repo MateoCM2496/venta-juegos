@@ -28,7 +28,7 @@ Route::get('/inicio', [InicioController::class, 'index'])->name('inicio');
 Route::get('/psn', [PsnController::class, 'index'])->name('psn');
 Route::get('/xbox', [XboxController::class, 'index'])->name('xbox');
 Route::get('/nintendo', [NintendoController::class, 'index'])->name('nintendo');
-Route::get('/info', [InfoController::class, 'index'])->name('informacion');
+Route::get('/info/{id}', [InfoController::class, 'index'])->name('informacion');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
