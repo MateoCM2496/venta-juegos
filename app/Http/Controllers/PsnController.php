@@ -10,7 +10,8 @@ class PsnController extends Controller
     public function index()
     {
         //
-        return view('auth.psn');
+        $games = Game::all();
+        return view('auth.psn', compact('games'));
     }
 
     public function store()
