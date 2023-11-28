@@ -39,10 +39,10 @@
                                   </div>
                             </div>
                             <div class="form-group">
-                                <label data-te-select-label-ref>Plataforma</label>
-                                <select data-te-select-init-multiple class="form-control">
+                                <label for="platform_id">Plataforma</label>
+                                <select name="platform_id" class="form-control" id="platform_id">
                                     @foreach ($platforms as $platform)
-                                        <option value="{{ $platform->id }}">{{ $platform->name }}</option>
+                                        <option value="{{ $platform->id }}">{{ $platform->id }}</option>
                                     @endforeach
                                 </select>
                             </div>

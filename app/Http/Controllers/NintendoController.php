@@ -10,8 +10,8 @@ class NintendoController extends Controller
 {
     public function index()
     {
-      
-        return view('auth.nintendo');
+        $games = Game::all();
+        return view('auth.nintendo', compact('games'));
     }
 
     public function store()

@@ -12,22 +12,15 @@ class Game extends Model
     protected $fillable = [
         'name',
         'description',
+        'platform_id',
         'image',
         'gender',
         'price',
         'stock',
     ];
 
-    public function storeImage($request)
+    public function platform()
     {
-        ini_set('memory_limit', -1);
-        $file = $request->file('file');
-        $nameFile = Str::uuid().".". $file->extension();
-        $image = Image::make($file);
-        $image->fit(1000, 1000);
-        $imagenPath = public_path('uploads').'/'.$nameFile;
-        $image->save($imagenPath);
-        return $image;
+        return $this->belongsTo(Platform::class, 'platform_id');
     }
-
 }
