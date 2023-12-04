@@ -8,8 +8,16 @@
                 <h2 class="text-white font-bold text-4xl">{{ $game->name }}</h2>
                 <button class="w-20 h-7 bg-blue-900 rounded-lg text-gray-300 my-12">{{ $game->gender }}</button>
                 <div class="flex w-52 h-14 items-center">
-                    <img class="w-10 h-10 mx-2" src="{{ asset('images/psn.png')}}" alt="image">
-                    <p class="text-white font-semibold">PSN</p>
+                    @if ($game->platform_id == 1)
+                        <img class="w-10 h-10 mx-2" src="{{ asset('images/xbox.png')}}" alt="image">
+                    @endif
+                    @if ($game->platform_id == 2)
+                        <img class="w-10 h-10 mx-2" src="{{ asset('images/psn.png')}}" alt="image">
+                    @endif
+                    @if ($game->platform_id == 3)
+                        <img class="w-20 h-10 mx-2" src="{{ asset('images/nintendo.png')}}" alt="image">
+                    @endif
+                    <p class="text-white font-semibold">{{ $game->platform->name }}</p>
                 </div>
             </div>
         </div>
